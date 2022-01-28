@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    useEffect(() => {
+        let i = 0;
+        const txt = 'Kyriakos Milad'; /* The text */
+        const speed = 70; /* The speed/duration of the effect in milliseconds */
+
+        function typeWriter() {
+            if (i < txt.length) {
+                // @ts-ignore
+                document.getElementById("name").innerHTML += txt.charAt(i);
+                i++;
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter()
+    });
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <h1 className="Name" id="name"></h1>
+                <a
+                    className="App-link"
+                    href="/kyriakosmilad.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Resume
+                </a>
+            </header>
+        </div>
+    );
 }
 
 export default App;
