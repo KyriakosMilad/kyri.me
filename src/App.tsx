@@ -12,10 +12,8 @@ function App() {
 
         function typeWriter() {
             if (i < txt.length) {
-                // @ts-ignore
-                document.getElementById("name").innerHTML += txt.charAt(i);
+                document.getElementById("name")!.innerHTML += txt.charAt(i);
                 i++;
-                // eslint-disable-next-line @typescript-eslint/no-unused-vars
                 setTimeout(typeWriter, speed);
             }
         }
