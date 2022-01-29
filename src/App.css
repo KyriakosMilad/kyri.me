@@ -33,8 +33,9 @@
 
 .Name {
   font-family: 'Source Code Pro', monospace;
-  font-size: 5em;
+  font-size: 4em;
 }
+
 .Name::after {
   content: "_";
   display: inline;
