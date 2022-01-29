@@ -3,8 +3,11 @@ import './App.css';
 
 function App() {
     useEffect(() => {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const name = urlParams.get("name")
         let i = 0;
-        const txt = 'Kyriakos Milad'; /* The text */
+        const txt = name ? name : 'Kyriakos Milad'; /* The text */
         const speed = 70; /* The speed/duration of the effect in milliseconds */
 
         function typeWriter() {
