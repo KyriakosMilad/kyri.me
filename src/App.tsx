@@ -34,11 +34,11 @@ function App() {
                 </a>
                 <a
                     className="App-link"
-                    href="/kyriakosmilad.pdf"
+                    href="https://www.linkedin.com/in/KyriakosMilad"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Resume
+                    LinkedIn
                 </a>
             </header>
         </div>
