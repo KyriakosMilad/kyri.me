@@ -26,6 +26,14 @@ function App() {
                 <h1 className="Name" id="name"></h1>
                 <a
                     className="App-link"
+                    href="/kyriakosmilad_cv.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Resume
+                </a>
+                <a
+                    className="App-link"
                     href="https://www.github.com/KyriakosMilad"
                     target="_blank"
                     rel="noopener noreferrer"
